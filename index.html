@@ -5,9 +5,211 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amazon Clone</title>
     <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script defer src="./app.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <nav class="mainnavbar">
+        <div class="navbar">
+        <div class="amazonlogo border">
+            <img src="https://pngimg.com/uploads/amazon/amazon_PNG11.png" alt="" >
+        </div>
+        <div class="mainlocationdiv border">
+            <div class="locationicon">
+                <img src="./istockphoto-1373024887-612x612-removebg-preview.png" alt="">
+            </div>
+            <div class="locationpara">
+                <p class="deliverto">Deliver to</p>
+                <p>Pakistan</p>
+            </div>
+        </div>
+        <div class="navsearch">
+                <select class="searchselect">
+                    <option>All</option>
+                    <option>All Department</option>
+                    <option>Arts & Crafts</option>
+                    <option>Automotive</option>
+                    <option>Baby</option>
+                    <option>Beauty & Personal Care</option>
+                    <option>Books</option>
+                    <option>Boys' Fashion</option>
+                    <option>Computers</option>
+                    <option>Deals</option>
+                    <option>Digital Music</option>
+                    <option>Girls' Fashion</option>
+                    <option>Health & Household</option>
+                    <option>Home & Kitchen</option>
+                    <option>Industrial & Scientific</option>
+                    <option>Kindle Store</option>
+                    <option>Luggage</option>
+                    <option>Men's Fashion</option>
+                    <option>Movies & TV</option>
+                    <option>Music, CDs & Vinyl</option>
+                    <option>Pet Supplies</option>
+                    <option>Prime Video</option>
+                    <option>Software</option>
+                    <option>Sports & Outdoors</option>
+                    <option>Tools & Home improvement</option>
+                    <option>Toys & Games</option>
+                    <option>Video Games</option>
+                    <option>Women's Fashion</option>
+                </select>
+                <input type="text" placeholder="Search Amazon" class="searchinput">
+                <div class="searchicon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+            <div class="mainnavlang" onmouseover="showdiv()" onmouseleave="hidediv()">
+                <div class="flagicon border">
+                    <img src="./flag.png" alt="">
+                    <h1>ES</h1>
+                </div>
+                <div class="arrowicon"><i class="fa-solid fa-sort-down"></i></div>
+            </div>
+            <div class="mainsingin " onmouseover="showdiv2()" onmouseleave="hidediv2()">
+                <div class="singin border">
+                    <p class="singpara">Hello, sing in</p>
+                    <h4 class="singh4">Accounts & Lists</h4>
+                </div>
+                <div class="arrowicon"><i class="fa-solid fa-sort-down"></i></div>
+            </div>
+            <div class="mainreturnorder border">
+                <div class="returnorderpra">
+                    <p class="Returns">Returns</p>
+                    <p>& Orders</p>
+                </div>
+            </div>
+            <div class="navcart border">
+                <div class="carticon">
+                    <p class="cartcount">0</p>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+                <span class="carttext">Cart</span>
+            </div>
+        </div>
+        </div>
+        <div class="subnavbar">
+            <div class="sub-nav-item menu border">
+                <i class="fa-solid fa-bars"></i>
+                <span class="">All</span>
+            </div>
+            <div class="navitem  border">Today's Deals</div>
+            <div class="navitem  border">Gift Cards</div>
+            <div class="navitem  border">Sell</div>
+            <div class="navitem  border">Registry</div>
+            <div class="navitem border">Prime Video</div>
+            <div class="navitem  border">Customer Service</div>
+        </div>
+    </nav>
     
+    <!-- hidden div section -->
+   <div class="langhiddediv" id="hiddendiv" hidden onmouseover="showdiv()" onmouseleave="hidediv()">
+                <div class="cambiarlang">
+                    <p>Cambiar idioma</p>
+                    <div class="inputradio">
+                    <input type="radio" name="radio" value="radio">
+                    <label >English - EN</label>
+                </div>
+                </div>
+                <div class="blankdiv1"></div>
+                <div class="langdiv2">
+                    <div class="inputradio">
+                    <input type="radio" name="radio" value="radio">
+                    <label>español - ES</label>
+                </div>
+                    <div class="inputradio">
+                    <input type="radio" name="radio" value="radio">
+                    <label>AR - الترجمة</label>
+                </div>
+                    <div class="inputradio">
+                    <input type="radio" name="radio" value="radio">
+                    <label>Deutsch - DE </label>
+                </div>
+                    <div class="inputradio">
+                    <input type="radio" name="radio" value="radio">
+                    <label> HE - תרגום</label>
+                </div>
+                    <div class="inputradio">
+                    <input type="radio" name="radio" value="radio">
+                    <label>한국어 - KO </label>
+                </div>
+                    <div class="inputradio">
+                    <input type="radio" name="radio" value="radio">
+                    <label>português - PT</label>
+                </div>
+                    <div class="inputradio">
+                    <input type="radio" name="radio" value="radio">
+                    <label>中文 (简体) - ZH</label>
+                </div>
+                    <div class="inputradio">
+                    <input type="radio" name="radio" value="radio">
+                    <label>中文 (繁體) - ZH</label>
+                </div>
+                </div>
+                <div class="blankdiv2"></div>
+                <div class="langpkrdiv">
+                    <p>Cambiar moneda</p>
+                    <div class="inputradio">
+                    <input type="radio" name="radio" value="radio">
+                    <label >PKR - rupia pakistan</label>
+                </div>
+                    <div class="inputradio2">
+                    <input type="radio" name="radio" value="radio">
+                    <label >$ - USD - dolar estadounidense</label>
+                </div>
+                <p class="ver">Ver todo</p>
+                </div>
+                <div class="blankdiv2"></div>
+                <div class="estas">
+                    <div class="estasflag">
+                        <img src="./flag.png" alt="">
+                    </div>
+                    <div class="estaspara"><p>Estás comprando en Amazon.com</p></div>
+                </div>
+                <div class="hiddendivlinks">
+                    <a href="#">Cambiar country/region</a>
+                </div>
+            </div>
+            <!-- hidden div 2 -->
+             <div id="hiddendiv2" class="mainhidden2" hidden onmouseover="showdiv2()" onmouseleave="hidediv2()">
+                <div class="hiddenbutton">
+                    <button class="hidbutton">Sign in</button>
+                </div>
+                <div class="newcustomer">
+                    <p>New Customer? <a class="Starthere" href="#">Start here.</a></p>
+                </div>
+                <div class="hidden2blankdiv"></div>
+                <div class="mainhadepara">
+                    <div class="mainyourlist">
+                        <div class="yourlisth3">
+                            <h3>Your Lists</h3>
+                        </div>
+                        <div class="listpara">
+                            <p>Create a List</p>
+                            <p>Find a List or Registry</p>
+                        </div>
+                    </div>
+                    <div class="mainyouraccount">
+                        <div class="youraccounth3">
+                            <h3>Your Lists</h3>
+                        </div>
+                        <div class="accountpara">
+                            <p>Account</p>
+                            <p>Orders</p>
+                            <p>Recommendations</p>
+                            <p>Browsing History</p>
+                            <p>Your Shopping perferences</p>
+                            <p>Watchlist</p>
+                            <p>Video Purchases & Rentals</p>
+                            <p>Kindle Unlimited</p>
+                            <p>Contant & Devices</p>
+                            <p>Subscribe & Save Items</p>
+                            <p>Memberships & Subscriptions</p>
+                            <p>Music Library</p>
+                        </div>
+                    </div>
+                </div>
+             </div>
 </body>
 </html>
