@@ -696,7 +696,7 @@ body{
 
 @media only screen and  (max-width: 768px) {
     .mainherodiv {
-        margin-top: 0px; /* Ya aap 10px/20px bhi kar sakte hain agar thoda gap chahiye */
+        margin-top: 0px; 
         height: auto;
     }
     .heroimage {
@@ -737,7 +737,81 @@ body{
         gap: 10px; 
     }
 
-    .griditem img {
+    .griditem img  {
+        height: 90px; 
+    }
+}
+.cardsgrid2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    top: 370px;
+    padding: 0 20px;
+    position: relative;
+    /* z-index: 2; */
+}
+.maincookerimg{
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.maincookerimg img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+.quadgrid2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    flex-grow: 1;
+    margin-bottom: 15px;
+    
+}
+.griditem2 {
+    /* grid-column: 1/4; */
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.griditem2 img {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+}
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+     .cardsgrid2 {
+
+        grid-template-columns: repeat(2, 1fr);
+        top: 20px;
+        gap: 15px;
+    }
+}
+
+@media only screen and  (max-width: 768px) {
+    
+        
+    .cardsgrid2 {
+        grid-template-columns: 1fr; 
+        /* margin-top: 10px;  */
+        top: 20px;
+        padding: 0 10px;
+        gap: 15px;
+    }
+
+    .card {
+        min-height: auto; 
+        padding: 15px;
+    }
+
+    .card h2 {
+        font-size: 18px; 
+    }
+
+    .quadgrid2 {
+        gap: 10px; 
+    }
+
+    .griditem2 img  {
         height: 90px; 
     }
 }
