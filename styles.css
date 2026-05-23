@@ -124,6 +124,7 @@ body{
 }
 .mainnavlang{
     display: flex;
+    position: relative;
     /* border: 2px solid blue; */
     width: 90px ;
     height: 40px;
@@ -156,6 +157,7 @@ body{
 }
 .mainsingin{
     display: flex;
+    position: relative;
     /* border: 2px solid blue; */
     width: 130px ;
     height: 40px;
@@ -250,6 +252,8 @@ body{
     padding-left: 15px;
     color: white;
     font-size: 14px;
+    /* position: relative;
+    z-index: 9999; */
 }
 
 .navitem {
@@ -334,9 +338,10 @@ body{
     border-radius: 5px;
     width: 260px;
     height: auto;
-    position: relative;
-    /* z-index: 9999; */
-    margin: 0px 952px;
+    position: absolute;
+    z-index: 999;
+    margin: 0px 940px;
+    /* margin-bottom: 100px; */
     
 }
 .langhiddediv::before {
@@ -348,7 +353,7 @@ body{
     top: -7px; 
     left: 75px;
     transform: rotate(45deg); 
-    /* z-index: 9999; */
+    z-index: 9999;
 }
 .cambiarlang{
     /* border: 2px solid red; */
@@ -432,12 +437,14 @@ body{
 }   
 /*     hidden div 2       */
 .mainhidden2{
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
+    border-radius: 5px;
     width: 520px;
     height: auto;
-    position: relative;
+    position: absolute;
     background-color: #ffffff;
-    margin-left: 753px;
+    margin-left: 741px;
+    z-index: 999;
 }
 .mainhidden2::before {
     content: "";
@@ -448,7 +455,7 @@ body{
     top: -7px; 
     left: 400px;
     transform: rotate(45deg); 
-    /* z-index: 9999; */
+    z-index: 9999;
 }
 .hiddenbutton{
     /* border: 2px solid black; */
@@ -513,4 +520,225 @@ body{
     font-size: 14px;
     margin-top: 10px;
     line-height: 22px;
+}
+/*              hero section            */
+.mainherodiv{
+    /* border: 2px solid red; */
+    margin-top: 40px;
+    width: 100%;
+    height: 500px;
+    /* overflow: hidden; */
+}
+.mainherodiv::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(to top, #eaeded 20%, transparent 100%);
+    pointer-events: none;
+
+}
+.mainheroimage {
+    /* border: 2px solid blue; */
+    width: 100%;
+    height: auto;
+    position: relative; 
+}
+
+.heroimage {
+    width: 100%;
+    height: 500px;
+   
+}
+.heroimage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.heroarrow {
+    width: 50px;       
+    height: 65px;      
+    position: absolute; 
+    top: 20%;          
+    transform: translateY(-50%); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 5;
+   
+}
+
+.arrowleft {
+    left: 20px;   
+}
+
+
+.arrowright {
+    right: 20px;
+}
+
+
+.heroarrow i {
+    font-size: 40px; 
+    color: #333;
+}
+.cardsgrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: -120px; 
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+}
+
+
+.card {
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 420px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+    font-size: 21px;
+    color: #111;
+    margin-bottom: 15px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+
+.singleimagebox {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.singleimagebox img {
+    max-width: 100%;
+    max-height: 250px;
+    object-fit: contain;
+}
+
+
+.quadgrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    flex-grow: 1;
+    margin-bottom: 15px;
+}
+
+.griditem {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    color: #111;
+    cursor: pointer;
+}
+
+.griditem img {
+    width: 100%;
+    height: 110px;
+    object-fit: cover;
+    margin-bottom: 4px;
+}
+
+
+
+
+.cardlink {
+    color: #007185;
+    text-decoration: none;
+    font-size: 13px;
+    display: inline-block;
+}
+
+.cardlink:hover {
+    color: #c7511f;
+    text-decoration: underline;
+}
+
+
+@media only screen and  (min-width: 480px) and (max-width: 1024px) {
+    .mainherodiv {
+        height: auto;
+        
+    }
+
+    .heroimage {
+        height: 350px; 
+    }
+
+    .cardsgrid {
+        grid-template-columns: repeat(2, 1fr); 
+        margin-top: -50px; 
+        gap: 15px;
+    }
+
+    .heroarrow {
+        top: 15%; 
+    }
+}
+
+
+@media only screen and  (max-width: 768px) {
+    .mainherodiv {
+        margin-top: 0px; /* Ya aap 10px/20px bhi kar sakte hain agar thoda gap chahiye */
+        height: auto;
+    }
+    .heroimage {
+        height: 220px; 
+        
+    }
+
+    .mainherodiv::after {
+        height: 120px; 
+    }
+
+    .heroarrow {
+        width: 35px;
+        height: 45px;
+        top: 5%;
+    }
+
+    .heroarrow i {
+        font-size: 35px; 
+    }
+
+    .cardsgrid {
+        grid-template-columns: 1fr; 
+        margin-top: 10px; 
+        padding: 0 10px;
+        gap: 15px;
+    }
+
+    .card {
+        min-height: auto; 
+        padding: 15px;
+    }
+
+    .card h2 {
+        font-size: 18px; 
+    }
+
+    .quadgrid {
+        gap: 10px; 
+    }
+
+    .griditem img {
+        height: 90px; 
+    }
 }
