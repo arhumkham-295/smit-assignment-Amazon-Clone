@@ -750,6 +750,7 @@ body{
     position: relative;
     /* z-index: 2; */
 }
+
 .maincookerimg{
     margin-bottom: 20px;
     cursor: pointer;
@@ -933,9 +934,10 @@ body{
     left: 0;
     transition: left 0.2s ease;
 }
+
 @media only screen and  (min-width: 480px) and (max-width: 1024px) {
     .carouselcontainer {
-        top: 20px; 
+        top: 50px; 
         width: 90%;
         padding: 15px;
     }
@@ -966,7 +968,7 @@ body{
 
 @media only screen and  (max-width: 768px) {
     .carouselcontainer {
-        top: 40px;
+        top: 60px;
         width: 90%; 
         border-radius: 0; 
         box-shadow: none; 
@@ -1003,3 +1005,92 @@ body{
 }
 }
 
+.carouselcontainer2 {
+    background-color: #ffffff;
+    width: 95%;
+    max-width: 1500px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: relative;
+    top: 480px;
+    margin: 0px auto;
+}
+
+.carouselcontainer2 h2 {
+    font-size: 21px;
+    color: #0f1111;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+@media only screen and  (min-width: 480px) and (max-width: 1024px) {
+    .carouselcontainer2 {
+        top: 80px; 
+        width: 90%;
+        padding: 15px;
+    }
+
+    .carouselcontainer2 h2 {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+}
+@media only screen and  (max-width: 768px) {
+    .carouselcontainer2 {
+        top: 80px;
+        width: 90%; 
+        border-radius: 0; 
+        box-shadow: none; 
+        padding: 10px;
+    }
+
+    .carouselcontainer2 h2 {
+        font-size: 16px;
+        padding-left: 5px;
+    }
+}
+/*                card grid 3            */
+.cardsgrid3 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    top: 520px;
+    padding: 0 20px;
+    position: relative;
+    /* z-index: 2; */
+}
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+     .cardsgrid3 {
+
+        grid-template-columns: repeat(2, 1fr);
+        top: 100px;
+        gap: 15px;
+    }
+}
+
+@media only screen and  (max-width: 768px) {
+    
+        
+    .cardsgrid3 {
+        grid-template-columns: 1fr; 
+        top: 110px;
+        padding: 0 10px;
+        gap: 15px;
+    }
+
+    /* .card {
+        min-height: auto; 
+        padding: 15px;
+    }
+
+    .card h2 {
+        font-size: 18px; 
+    }
+
+    .quadgrid2 {
+        gap: 10px; 
+    }
+
+    .griditem2 img  {
+        height: 90px; 
+    } */
+}

@@ -55,7 +55,7 @@ function heroimgarrowleft(){
     }
 }
         // selider section started
-        const track = document.getElementById('carouselTrack');
+var track = document.getElementById('carouselTrack');
 var prevBtn = document.getElementById('prevBtn');
 var nextBtn = document.getElementById('nextBtn');
 var thumb = document.getElementById('scrollThumb');
@@ -90,3 +90,39 @@ function handleIndicatorScroll() {
 nextBtn.addEventListener('click', handleNextScroll);
 prevBtn.addEventListener('click', handlePrevScroll);
 track.addEventListener('scroll', handleIndicatorScroll);
+          // selider section started
+var Track2 = document.getElementById('carouselTrack2');
+var prevBtn2 = document.getElementById('prevBtn2');
+var nextBtn2 = document.getElementById('nextBtn2');
+var thumb2 = document.getElementById('scrollThumb2');
+
+var scrollAmount2 = 300; 
+
+
+function NextScroll2() {
+    Track2.scrollBy({
+        left: scrollAmount2,
+        behavior: 'smooth'
+    });
+}
+
+
+function PrevScroll2() {
+    Track2.scrollBy({
+        left: -scrollAmount2,
+        behavior: 'smooth'
+    });
+}
+
+
+function Scroll2() {
+    var maxScroll2 = Track2.scrollWidth - Track2.clientWidth;
+    if (maxScroll2 > 0) {
+        var percentage2 = Track2.scrollLeft / maxScroll2;
+        var maxThumbMove2 = 100 - 60; 
+        thumb2.style.left = `${percentage2 * maxThumbMove2}%`;
+    }
+}
+nextBtn2.addEventListener('click', NextScroll2);
+prevBtn2.addEventListener('click', PrevScroll2);
+Track2.addEventListener('scroll', Scroll2);
