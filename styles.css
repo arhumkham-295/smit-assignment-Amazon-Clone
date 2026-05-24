@@ -815,3 +815,191 @@ body{
         height: 90px; 
     }
 }
+/*      selider1 sectioon started       */
+.carouselcontainer {
+    background-color: #ffffff;
+    width: 95%;
+    max-width: 1500px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: relative;
+    top: 430px;
+    margin: 0px auto;
+}
+
+.carouselcontainer h2 {
+    font-size: 21px;
+    color: #0f1111;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+
+.carouselwrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+
+.carouseltrack {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px 5px;
+    width: 100%;
+}
+
+
+.carouseltrack::-webkit-scrollbar {
+    display: none;
+}
+
+
+.productcard {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 220px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.productcard:hover {
+    transform: scale(1.03);
+}
+
+.productcard img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+
+.navbtn {
+    
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ddd;
+    width: 40px;
+    height: 45px;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: #555;
+    transition: background-color 0.2s;
+}
+
+.navbtn:hover {
+    background-color: #ffffff;
+    color: #111;
+    border-color: #999;
+}
+
+.prevbtn {
+    left: -15px;
+}
+
+.nextbtn {
+    right: -15px;
+}
+
+
+.scrollbarcontainer {
+    width: 100%;
+    height: 6px;
+    /* background-color: #e0e0e0; */
+    border-radius: 3px;
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.scrollbarthumb {
+    width: 50%;
+    height: 100%;
+    background-color: #a0a0a0;
+    border-radius: 3px;
+    position: absolute;
+    left: 0;
+    transition: left 0.2s ease;
+}
+@media only screen and  (min-width: 480px) and (max-width: 1024px) {
+    .carouselcontainer {
+        top: 20px; 
+        width: 90%;
+        padding: 15px;
+    }
+
+    .carouselcontainer h2 {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .carouseltrack {
+        gap: 20px; 
+    }
+
+    .productcard {
+        width: 140px; 
+        height: 190px;
+    }
+
+   
+    .prevbtn {
+        left: 5px;
+    }
+    
+    .nextbtn {
+        right: 5px;
+    }
+}
+
+@media only screen and  (max-width: 768px) {
+    .carouselcontainer {
+        top: 40px;
+        width: 90%; 
+        border-radius: 0; 
+        box-shadow: none; 
+        padding: 10px;
+    }
+
+    .carouselcontainer h2 {
+        font-size: 16px;
+        padding-left: 5px;
+    }
+
+    .carouseltrack {
+        gap: 15px;
+        padding-bottom: 15px; 
+    }
+
+    .productcard {
+        width: 120px; 
+        height: 160px;
+    }
+
+   
+    .navbtn {
+        display: none !important; 
+    }
+
+    .scrollbarcontainer {
+        margin-top: 10px;
+        height: 4px;
+    }
+    
+.prevbtn, .prevbtn {
+    left: -15px;
+}
+}
+

@@ -54,3 +54,39 @@ function heroimgarrowleft(){
         image.src=heroimg1
     }
 }
+        // selider section started
+        const track = document.getElementById('carouselTrack');
+var prevBtn = document.getElementById('prevBtn');
+var nextBtn = document.getElementById('nextBtn');
+var thumb = document.getElementById('scrollThumb');
+
+var scrollAmount = 300; 
+
+
+function handleNextScroll() {
+    track.scrollBy({
+        left: scrollAmount,
+        behavior: 'smooth'
+    });
+}
+
+
+function handlePrevScroll() {
+    track.scrollBy({
+        left: -scrollAmount,
+        behavior: 'smooth'
+    });
+}
+
+
+function handleIndicatorScroll() {
+    var maxScroll = track.scrollWidth - track.clientWidth;
+    if (maxScroll > 0) {
+        var percentage = track.scrollLeft / maxScroll;
+        var maxThumbMove = 100 - 60; 
+        thumb.style.left = `${percentage * maxThumbMove}%`;
+    }
+}
+nextBtn.addEventListener('click', handleNextScroll);
+prevBtn.addEventListener('click', handlePrevScroll);
+track.addEventListener('scroll', handleIndicatorScroll);
